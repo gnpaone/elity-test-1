@@ -24,13 +24,13 @@ jobs:
         node-version: 18.x
     
     - name: Install NPM packages
-      run: npm i --force
+      run: npm i --package-lock-only --force
     
-    - name: Build project
-      run: CI=false npm run build
+    # - name: Build project
+    #   run: CI=false npm run build
 
     - name: Upload production-ready build files
       uses: actions/upload-artifact@v2
       with:
-        name: production-files
+        name: files
         path: .
