@@ -2,6 +2,7 @@
   "name": "react",
   "version": "1.0.0",
   "description": "",
+  "homepage": "/elity-test-1",
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
