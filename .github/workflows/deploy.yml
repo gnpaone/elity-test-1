@@ -1,4 +1,4 @@
-name: Check files
+name: Build & deploy
 
 on:
   workflow_dispatch:
@@ -10,8 +10,8 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build
+  build_and_deploy:
+    name: WebApp
     runs-on: ubuntu-latest
     
     steps:
@@ -24,13 +24,13 @@ jobs:
         node-version: 18.x
     
     - name: Install NPM packages
-      run: npm i --package-lock-only --force
+      run: npm ci --force
     
-    # - name: Build project
-    #   run: CI=false npm run build
+    - name: Build project
+      run: CI=false npm run build
 
-    - name: Upload production-ready build files
-      uses: actions/upload-artifact@v2
+    - name: Deploy to gh-pages
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        name: files
-        path: .
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./build
