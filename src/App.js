@@ -134,7 +134,7 @@ export default function App() {
 
   return (
     <AppDiv>
-      <Card sx={{ minWidth: 400 }}>
+      <Card sx={{ minWidth: 400, boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)" }}>
         <CardContent>
           <List
             sx={{
