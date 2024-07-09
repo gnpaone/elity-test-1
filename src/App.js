@@ -12,13 +12,13 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 
-const AppDiv = styled("div")`
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: center;
-  color: #1f2128;
-  padding: 10vh;
-`;
+const AppDiv = styled("div")({
+  fontFamily: "Montserrat",
+  display: "flex",
+  justifyContent: "center",
+  color: "#1f2128",
+  padding: "10vh",
+});
 
 const ColorButton = styled(Button)({
   boxShadow: "none",
@@ -27,6 +27,7 @@ const ColorButton = styled(Button)({
   lineHeight: 1.5,
   backgroundColor: "#ffce22",
   color: "#1f2128",
+  fontFamily: "Montserrat",
   "&:hover": {
     backgroundColor: "#ffd84d",
     boxShadow: "none",
@@ -143,7 +144,7 @@ export default function App() {
             }}
           >
             <ListItem>
-              <ListItemText primary="All pages" />
+              <ListItemText primary="All pages" disableTypography />
               <Checkbox
                 edge="end"
                 checked={checked.length === 5}
@@ -165,7 +166,11 @@ export default function App() {
 
               return (
                 <ListItem key={value}>
-                  <ListItemText id={labelId} primary={`Page ${value}`} />
+                  <ListItemText
+                    id={labelId}
+                    primary={`Page ${value}`}
+                    disableTypography
+                  />
                   <Checkbox
                     edge="end"
                     checked={checked.indexOf(value) !== -1}
