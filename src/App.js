@@ -23,7 +23,7 @@ const AppDiv = styled("div")({
 const ColorButton = styled(Button)({
   boxShadow: "none",
   textTransform: "none",
-  padding: "6px 12px",
+  padding: "12px",
   lineHeight: 1.5,
   backgroundColor: "#ffce22",
   color: "#1f2128",
