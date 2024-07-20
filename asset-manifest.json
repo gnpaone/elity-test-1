@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/elity-test-1/static/js/main.66726853.js",
-    "index.html": "/elity-test-1/index.html",
-    "main.66726853.js.map": "/elity-test-1/static/js/main.66726853.js.map"
+    "main.js": "/material-ui-test/static/js/main.66726853.js",
+    "index.html": "/material-ui-test/index.html",
+    "main.66726853.js.map": "/material-ui-test/static/js/main.66726853.js.map"
   },
   "entrypoints": [
     "static/js/main.66726853.js"
